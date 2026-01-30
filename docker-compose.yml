@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "${PORT:-8000}:8000"
+    environment:
+      - TRACKINGS_API_URL=${TRACKINGS_API_URL:-https://your-convex-deployment.convex.site}
+      - PORT=8000
